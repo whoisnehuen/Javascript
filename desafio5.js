@@ -10,3 +10,14 @@ Ahora vamos a actualizar el stock:
 Utilizaremos otro “bucle for” para simular la venta de productos. Reduce el stock de productos eliminando el último con el método “pop” e imprime en la consola el nuevo stock después de la venta.
 */
 
+let Productos = ["papel", "lapiz", "borrador", "lapicera", "marcador", "tinta", "cuaderno", "regla", "compas", "pincel"];
+console.log("Nuestros productos:");
+for(let i=0; i< Productos.length; i++){
+    console.log(Productos[i]);
+}
+
+for (let x=0; x<10; x++){
+    console.log("Nuestro stock ahora:");
+    Productos.pop();
+    console.log(Productos);
+}
