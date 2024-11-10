@@ -1,8 +1,10 @@
 body{
-    background-color: aqua;
+    background-color:black;
+    color: white;
 }
 
 h1{
+    color: #ffbb00;
     display: flex;
     justify-content: center;
     font-size: 50px;
@@ -26,7 +28,7 @@ ul {
 /* Contenedor principal */
 #contenedor {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Tres columnas */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
     gap: 20px; /* Espacio entre cada caja */
     padding: 20px; /* Espacio alrededor del contenedor */
     max-width: 1200px; /* Ancho máximo del contenedor */
@@ -36,10 +38,10 @@ ul {
 /* Estilo para cada caja de producto */
 
 .caja-producto {
-    border: 1px solid #000000;
+    border: 1px solid white;
     border-radius: 8px;
     padding: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px whitesmoke;
     text-align: center;
 }
   
@@ -67,7 +69,7 @@ button:focus {
 }
 
 button {
-    --color: black;
+    --color: white;
     --hover: green;
 }
 
@@ -94,8 +96,6 @@ button {
 ----------------
 
 footer {
-    background-color: black;
-    color: black;
     padding: 20px 0;
     font-family: Arial, sans-serif;
 }
@@ -117,7 +117,7 @@ footer {
 .footer-seccion h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
-    color: #ffbb00;
+    color:#ffbb00;
 }
 
 .footer-seccion p {
@@ -134,7 +134,6 @@ footer {
 }
 
 .footer-seccion ul li a {
-    color: black;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -148,13 +147,9 @@ footer {
     gap: 10px;
 }
 
-.social li a {
-    color: #504a4a;
-}
-
 .footer-copyright {
     text-align: center;
     padding-top: 10px;
     font-size: 0.8em;
-    color: black;
+    color: whitesmoke;
 }

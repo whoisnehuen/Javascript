@@ -13,7 +13,8 @@ let Procesador = {
     nombre : "Procesador",
     imagen: "./img/procesador.png",
     marca : "Intel core",
-    precio : 300000,
+    precio : 302999,
+    cuotas : 6,
     modelo : "i5",
     color : "none",
     envioGratis : true,
@@ -23,7 +24,8 @@ let Gabinete = {
     nombre : "Gabinete",
     imagen: "./img/gabinete.png",
     marca : "Sentey",
-    precio : 60000,
+    precio : 41400,
+    cuotas : false,
     modelo : "office",
     color : "rojo",
     envioGratis : true,
@@ -33,7 +35,8 @@ let Motherboard = {
     nombre : "Motherboard",
     imagen: "./img/mother.png",
     marca : "MSI",
-    precio : 150000,
+    precio : 119999,
+    cuotas : 6,
     modelo : "B206",
     color : "gris",
     envioGratis : true,
@@ -44,6 +47,7 @@ let Mouse = {
     imagen: "./img/mouse.png",
     marca : "Genius",
     precio : 5600,
+    cuotas : false,
     modelo : "USB",
     color : "rojo",
     envioGratis : false,
@@ -53,7 +57,8 @@ let Teclado = {
     nombre : "Teclado",
     imagen: "./img/teclado.png",
     marca : "Logitec",
-    precio : 7800,
+    precio : 46977.85,
+    cuotas : false,
     modelo : "Bluetooth",
     color : "rosa",
     envioGratis : false,
@@ -63,13 +68,57 @@ let Auriculares = {
     nombre: "Auriculares",
     imagen: "./img/auricular.png",
     marca : "JBL",
-    precio : 10000,
+    precio : 69992.22,
+    cuotas : 3,
     modelo : "Bluetooth",
     color : "azul",
     envioGratis : false,
 }
 
-let Productos = [Procesador, Gabinete, Motherboard, Mouse, Teclado, Auriculares];
+let Monitor = {
+    nombre: "Monitor",
+    imagen: "./img/monitor.png",
+    marca : "Samsung",
+    precio : 214999,
+    cuotas : 9,
+    modelo : "LED",
+    color : "black",
+    envioGratis : true,
+}
+
+let Smartphone = {
+    nombre: "Smartphone",
+    imagen: "./img/smartphone.png",
+    marca : "Samsung",
+    precio : 2599999,
+    cuotas : 12,
+    modelo : "S24 Ultra",
+    color : "grey",
+    envioGratis : true,
+}
+
+let Smartwatch = {
+    nombre: "Smartwatch",
+    imagen: "./img/smartwatch.png",
+    marca : "Samsung",
+    precio : 92159,
+    cuotas : false,
+    modelo : "Fit 3",
+    color : "black",
+    envioGratis : false,
+}
+
+let Impresora = {
+    nombre: "Impresora 3D",
+    imagen: "./img/impresora.webp",
+    marca : "Creality",
+    precio : 2599999,
+    cuotas : 9,
+    modelo : "Ender 3 V2",
+    envioGratis : true,
+}
+
+let Productos = [Procesador, Gabinete, Motherboard, Mouse, Teclado, Auriculares, Monitor, Smartphone, Smartwatch, Impresora];
 
 
 
@@ -101,6 +150,17 @@ for (i=0; i < Productos.length; i++){
     let _precio = document.createElement("p");
     _precio.innerText = "Precio : $" + Productos[i].precio;
     caja.appendChild(_precio);
+
+    let _cuotas = document.createElement("p");
+    if (Productos[i].cuotas == false){
+        _cuotas.innerText = "Hasta 24 cuotas CON interés"
+    }
+    else{
+        let precioCuota = Productos[i].precio / Productos[i].cuotas
+        _cuotas.innerText = "Hasta " + Productos[i].cuotas + " cuotas SIN interés de $" + precioCuota.toFixed(2)
+        _cuotas.style.color = "red";
+    }
+    caja.appendChild(_cuotas);
 
     let _envio = document.createElement("p");
     if (Productos[i].envioGratis == true){
