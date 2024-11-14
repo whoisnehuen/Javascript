@@ -11,12 +11,26 @@
 <body>
     <header>
         <h1>Lorem ipsum</h1>
+        <br>
+        <button id = "botonCarrito" class="btn-carrito">
+            <i class="fa-solid fa-cart-shopping fa-beat-fade"></i> Carrito (<span id = "cantidadProductos"> 0 </span> Productos)
+        </button>
+        <br>
         <ul>
             <li><a href="#"><i class="fa-solid fa-house"></i> Inicio</a></li>
             <li><a href="#"><i class="fa-solid fa-bars"></i> Categorias</a></li>
             <li><a href="#" id="ofertas"><i class="fa-solid fa-exclamation fa-shake"></i> Ofertas</a></li>
-            <li><a href="#" id="shop"><i class="fa-solid fa-cart-shopping fa-beat-fade"></i> Carrito</a></li>
         </ul>
+
+        <div id = "modal">
+            <div id = "contenidoModal">
+                <span class = "close"></span>
+                <h2>Tu Carrito</h2>
+                <div id = "productos"></div>
+                <p id = "carritoTotal"> Total: $0.00</p>
+            </div>
+        </div>
+
     </header>
     <div id="contenedor">
     </div>
@@ -54,6 +68,7 @@
     </footer>
     
 
+    <script src="productos.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
