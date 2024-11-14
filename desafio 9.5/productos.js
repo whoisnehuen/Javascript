@@ -1,7 +1,6 @@
-let oferta = document.getElementById("ofertas");
-oferta.addEventListener("click", function(){
-    alert("Muy pronto, más novedades.");
-});
+function noDisponible() {
+    alert("Página en desarrollo")
+}
 
 
 let Procesador = {
@@ -166,9 +165,9 @@ for (i=0; i < Productos.length; i++){
     }
     caja.appendChild(_envio);
 
-    let btn = document.createElement("button");
+    let btn = document.createElement("div");
     let txt = document.createElement("h3");
-    btn.innerText = "Agregar al carrito";
+    btn.innerHTML = `<button class="add-to-cart-button" onclick="addToCart(this, &quot;${Productos[i].nombre}&quot;, ${Productos[i].precio})">Agregar al carrito</button>`
     caja.appendChild(btn);
     txt.innerText = "Producto agregado!";
     txt.style.color = "green";
